@@ -99,7 +99,7 @@ def problem4():
         if b == 1000:
             break
     return largest
-'''
+
 def problem4():
     status = False
     top = 999 * 999
@@ -137,6 +137,31 @@ def problem4():
         for item in temp_lst:
             if len(str)
             item = str
-            
-        
+'''
+def problem4():
+    # the largest palindrome made up of the product of two three digit numbers
+    container = []
+    a = 999
+    b = 999
+    while True:
+        result = [ x for x in str( a * b ) ]
+        if result == result[::-1]:
+            if len(str(a)) == 3 and len(str(b)) == 3:
+                container.append((int("".join(result)),str(a),str(b)))
+            else:
+                pass
+        a -= 1
+        if a == 0:
+            a = 999
+            b -= 1
+            if b == 0:
+                maxi = 0
+                index = 0
+                for i in range(len(container)):
+                    if container[i][0] > maxi:
+                        maxi = container[i][0]
+                        index = i 
+                return container[i]
+                        
+print(problem4())
         
