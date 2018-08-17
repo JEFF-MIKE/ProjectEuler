@@ -1,3 +1,6 @@
+# it works, and is fast, but the code is something you'd see
+# from shitcode.com
+
 def q52():
     # find the smallest positive
     # x, such that 2x,3x,4x,5x and 6x
@@ -10,6 +13,8 @@ def q52():
             if len(str(i*3)) == len(str(i*4)):
                 if len(str(i*4)) == len(str(i*5)):
                     if len(str(i*5)) == len(str(i*6)):
+                        # okay, they are the same length, NOW 
+                        # you can actually check their numbers
                         int2 = str(i*2)
                         int3 = str(i*3)
                         int4 = str(i*4)
@@ -26,6 +31,7 @@ def q52():
                                     d[key][letter] += 1
                             keyArray.append(d[key])
                         # now check to see if they are all equal or not
+                        # verbose, but is neater than the possible one liner
                         flag1 = keyArray[0] == keyArray[1]
                         flag2 = keyArray[1] == keyArray[2]
                         flag3 = keyArray[2] == keyArray[3]
